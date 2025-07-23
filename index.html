@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSparkz - Learn, Grow, Excel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .login-embed {
+  background-color: #e0f7fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.login-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  margin: auto;
+}
+
+.login-box h2 {
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  background-color: #00796b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #004d40;
+}
+
+.login-box .extras {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fb;
+    }
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin-top: 15px;
+    }
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #hero {
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+    #hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    #hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    #hero button {
+      padding: 12px 30px;
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .features, .courses, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 300px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/Skillsparkz.jpg" alt="Skillsparkz Logo" style="max-width: 100px; vertical-align: middle;" />
+    <h1>Skillsparkz</h1>
+    <p>Empowering School Students with Digital Skills</p>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <button onclick="toggleDarkMode()" style="position:fixed;top:20px;right:20px;z-index:9999;">🌓 Mode</button>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Learn Anytime, Anywhere</h2>
+    <p>Free and Paid Courses in Math, Science, English & Digital Skills</p>
+    <button onclick="showSignupAlert()">Sign Up Now</button>
+    <p id="greeting-time" style="text-align: center; font-weight: bold; font-size: 20px; margin: 10px;"></p>
+  </section>
+
+  <section style="background-color: #fff;">
+    <h2 style="text-align:center;">Why Choose SkillSparkz?</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Interactive Learning</h3>
+        <p>Courses designed with real-life projects, quizzes, and videos to make learning fun.</p>
+      </div>
+      <div class="card">
+        <h3>Learn & Earn</h3>
+        <p>Students can upload notes and earn from their content once approved.</p>
+      </div>
+      <div class="card">
+        <h3>Skill Building</h3>
+        <p>Learn coding, public speaking, design, entrepreneurship & more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #eef2f7;">
+    <h2 style="text-align:center;">Featured Courses</h2>
+    <div class="courses">
+      <div class="card">
+        <img src="images/course_python.jpg" alt="Python for Kids">
+        <h3>Python for School Students</h3>
+        <p>Learn basics of coding with fun games & mini projects. No experience needed!</p>
+        <a href="courses.html"><button>Start Learning</button></a>
+      </div>
+      <div class="card">
+        <img src="images/course_math.jpg" alt="Math Course">
+        <h3>Mastering Math - Class 7</h3>
+        <p>Visual explanations, practice quizzes and smart shortcuts.</p>
+        <a href="courses.html"><button>Explore Now</button></a>
+      </div>
+      <div class="card">
+        <img src="images/course_science.jpg" alt="Science">
+        <h3>Science is Magic</h3>
+        <p>Hands-on experiments and concept boosters for Class 6–8 students.</p>
+        <a href="courses.html"><button>View Course</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">What Our Students Say</h2>
+    <div class="testimonials">
+      <div class="card">
+        <p>"SkillSparkz helped me build my own website in 1 week. I feel like a creator now!"</p>
+        <strong>- Aditi, Class 8</strong>
+      </div>
+      <div class="card">
+        <p>"I used to fear math, now I top my class. Thanks to their cool lessons!"</p>
+        <strong>- Aryan, Class 7</strong>
+      </div>
+      <div class="card">
+        <p>"Their public speaking course made me win the school debate competition!"</p>
+        <strong>- Mahi, Class 9</strong>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #4b0082; color: white; text-align: center;">
+    <h2>Ready to Spark Your Skills?</h2>
+    <p>Join thousands of school students taking charge of their learning journey.</p>
+    <a href="courses.html"><button style="background-color: #ff9800; color: white; padding: 12px 25px; border: none; border-radius: 5px;">Browse Courses</button></a>
+  </section>
+
+  <section class="login-embed">
+  <div class="login-box">
+    <h2>Welcome Back!</h2>
+    <p class="subtitle">Log in to access your courses, notes, projects & more</p>
+    <input type="text" id="username" placeholder="Enter username" />
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="handleLogin()">Login</button>
+    <div class="error" id="error-msg"></div>
+    <div class="extras">
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+      <p><a href="#">Forgot Password?</a></p>
+    </div>
+  </div>
+</section>
+<script>
+  function handleLogin() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMsg = document.getElementById('error-msg');
+
+    if (!username || !password) {
+      errorMsg.textContent = 'Please enter both username and password.';
+      return;
+    }
+
+    if (username === 'student' && password === 'skillsparkz') {
+      alert('Login successful! Welcome to Skill Sparkz.');
+      window.location.href = 'index.html';
+    } else {
+      errorMsg.textContent = 'Invalid credentials. Try again.';
+    }
+  }
+</script>
+  <footer>
+    <p>&copy; 2025 SkillSparkz. All rights reserved.</p>
+    <p>Empowering Youth with Digital Education</p>
+  </footer>
+
+  <script>
+    function showSignupAlert() {
+      alert("Sign-up functionality coming soon!");
+    }
+  </script>
+</body>
+</html>
